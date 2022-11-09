@@ -1,15 +1,18 @@
 ---
-import Layout from '~/layouts/Layout.astro';
-// import Card from '../components/Card.astro';
-import { Header } from '~/components/Header'
-import { PhotoSlider } from '~/components/PhotoSlider';
+import Layout from "~/layouts/Layout.astro";
+import {Header} from "~/components/Header";
+import { PhotoSlider } from "~/components/PhotoSlider";
 ---
 
 <Layout title="Akho | We Feed Dreams">
-	<main>
-		<Header />
-		<PhotoSlider />
-		<!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+  <main>
+    <Header client:load />
+    <PhotoSlider />
+		<div class="test">
+			<p>Content Here</p>
+		</div>
+
+    <!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -36,16 +39,25 @@ import { PhotoSlider } from '~/components/PhotoSlider';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul> -->
-	</main>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		min-height: 100%;
-		height: 100%
+  main {
+    margin: auto;
+    min-height: 100%;
+    height: 100%;
+  }
+	.test {
+		height: 100%;
+		flex: 1;
+		justify-content: center;
+		align-items: center;
 	}
-	h1 {
+	.text > p {
+		width: fit-content;
+	}
+  /* h1 {
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
@@ -81,5 +93,5 @@ import { PhotoSlider } from '~/components/PhotoSlider';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
-	}
+	} */
 </style>
