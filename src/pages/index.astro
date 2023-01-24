@@ -1,13 +1,15 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import {Header} from "~/components/Header";
+import { Header } from "~/components/Header";
 import { PhotoSlider } from "~/components/PhotoSlider";
+import { ProjectsHero } from "~/components/ProjectsHero";
 ---
 
 <Layout title="Akho | We Feed Dreams">
   <main>
     <Header client:load />
     <PhotoSlider />
+		<ProjectsHero />
 		<div class="test">
 			<p>Content Here</p>
 		</div>
