@@ -3,13 +3,19 @@ import Layout from "~/layouts/Layout.astro";
 import { Header } from "~/components/Header";
 import { PhotoSlider } from "~/components/PhotoSlider";
 import { ProjectsHero } from "~/components/ProjectsHero";
+import { ThreeCards } from "~/components/ThreeCards";
 ---
 
 <Layout title="Akho | We Feed Dreams">
   <main>
     <Header client:load />
     <PhotoSlider />
-		<ProjectsHero />
+		<div class="flex justify-center items-start">
+			<div class="max-w-6xl">
+				<ProjectsHero />
+				<ThreeCards client:load />
+			</div>
+		</div>
 		<div class="test">
 			<p>Content Here</p>
 		</div>
