@@ -1,0 +1,28 @@
+---
+import ProjectData from '~/data/projectData.json'
+import { HeaderOther } from "~/components/HeaderOther";
+import { Project } from "~/components/Project";
+import Layout from "~/layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return ProjectData.map((p) => {
+    return { params: { id: p.id }}
+  })
+}
+
+const { id } = Astro.params;
+---
+<Layout title="Akho | We Feed Dreams">
+  <main>
+    <HeaderOther />
+    <!-- <PhotoSlider /> -->
+		<div class="flex justify-center items-start">
+			<div class="max-w-6xl">
+				<Project project={ProjectData[Number(id) - 1]} />
+			</div>
+		</div>
+		<div class="test">
+			<p>Content Here</p>
+		</div>
+  </main>
+</Layout>

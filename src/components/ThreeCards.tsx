@@ -1,9 +1,36 @@
 export const ThreeCards = () => {
 	return (
 		<div className="w-full h-[200px] flex flex-row gap-6 my-24 px-8">
-			<Card subTitle="WOMEN WHO MATTER" title="Our Champions" color='#a2305d' highlightColor='#fd619d' />
-			<Card subTitle="SUCCESS STORIES FROM AKHO" title="Happy Stories" color='#fd619d' highlightColor='#a2305d' />
-			<Card subTitle="MAKE A DIFFERENCE" title="Join as our Volunteer" color='#a2305d' highlightColor='#fd619d' />
+			<a className="w-full">
+			<div className={`py-8 px-4 flex flex-col justify-center hover:cursor-pointer items-center w-full bg-[#a2305d] hover:bg-[#7c2548]`} >
+				<p className="text-gray-50">
+				WOMEN WHO MATTER
+				</p>
+				<p className="font-serif text-gray-50 text-2xl">
+				Our Champions
+				</p>
+			</div>
+		</a>
+		<a className="w-full">
+			<div className={`py-8 px-4 flex flex-col justify-center hover:cursor-pointer items-center w-full bg-[#fd619d] hover:bg-[#d05081]`} >
+				<p className="text-gray-50">
+				SUCCESS STORIES FROM AKHO
+				</p>
+				<p className="font-serif text-gray-50 text-2xl">
+				Happy Stories
+				</p>
+			</div>
+		</a>
+		<a className="w-full">
+			<div className={`py-8 px-4 flex flex-col justify-center hover:cursor-pointer items-center w-full bg-[#a2305d] hover:bg-[#80264a]`} >
+				<p className="text-gray-50">
+				MAKE A DIFFERENCE
+				</p>
+				<p className="font-serif text-gray-50 text-2xl">
+				Join as our Volunteer
+				</p>
+			</div>
+		</a>
 		</div>
 	)
 }
